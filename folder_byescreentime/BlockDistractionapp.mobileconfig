@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>com.screentimewizard.block4</string>
+    <key>PayloadUUID</key>
+    <string>56B8C621-E0EF-44A3-988D-233A45D14EF1</string>
+    <key>PayloadDisplayName</key>
+    <string>Block Distraction Apps</string>
+    <key>PayloadOrganization</key>
+    <string>Tyxiu0109</string>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadType</key>
+        <string>com.apple.applicationaccess</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadIdentifier</key>
+        <string>com.screentimewizard.block4.payload</string>
+        <key>PayloadUUID</key>
+        <string>1A3BF14D-BA68-4C04-97F0-7B70E82F62F3</string>
+        <key>PayloadDisplayName</key>
+        <string>Blocked Apps</string>
+        <key>blacklistedAppBundleIDs</key>
+        <array>
+          <string>com.zhiliaoapp.musically</string>       <!-- TikTok -->
+          <string>com.reddit.Reddit</string>             <!-- Reddit -->
+          <string>com.atebits.Tweetie2</string>          <!-- X (Twitter) -->
+          <string>ph.telegra.Telegraph</string>          <!-- Telegram -->
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
