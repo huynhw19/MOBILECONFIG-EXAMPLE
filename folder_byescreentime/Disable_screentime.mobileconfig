@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>com.example.screentimeconfig</string>
+    <key>PayloadUUID</key>
+    <string>5A67B4C2-8942-4AC1-9F57-FA1B9D82C51B</string>
+    <key>PayloadDisplayName</key>
+    <string>Screen Time disable</string>
+    <key>PayloadOrganization</key>
+    <string>Tyxiu0109</string>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadType</key>
+        <string>com.apple.applicationaccess</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadIdentifier</key>
+        <string>com.example.screentimeconfig.restrict</string>
+        <key>PayloadUUID</key>
+        <string>B4F03E91-66F7-4C17-8123-905F4523AB87</string>
+        <key>PayloadDisplayName</key>
+        <string>Screen Time Lock</string>
+        <key>allowScreenTimeModification</key>
+        <false/>
+      </dict>
+    </array>
+  </dict>
+</plist>
