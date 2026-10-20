@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" 
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+  <key>PayloadIdentifier</key>
+  <string>com.screenwizard.backupfriendly</string>
+  <key>PayloadUUID</key>
+  <string>AB12CD34-5678-90EF-1234-56789ABCDEF0</string>
+  <key>PayloadDisplayName</key>
+  <string>🛟 Backup Friendly + Battery Saver</string>
+  <key>PayloadOrganization</key>
+  <string>Tyxiu0109</string>
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>PayloadType</key>
+      <string>com.apple.applicationaccess</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>PayloadIdentifier</key>
+      <string>com.screenwizard.backupfriendly.restrictions</string>
+      <key>PayloadUUID</key>
+      <string>CD34EF56-7890-ABCD-1234-EF567890ABCD</string>
+      <key>PayloadDisplayName</key>
+      <string>iCloud + Battery Balance</string>
+      
+      <!-- BATTERY SAVERS -->
+      <key>allowBackgroundAppRefresh</key>
+      <false/>
+      <key>allowSiri</key>
+      <false/>
+      <key>allowAirDrop</key>
+      <false/>
+      
+      <!-- iCLOUD FRIENDLIES -->
+      <key>allowCloudBackup</key>
+      <true/>
+      <key>allowCloudDocumentSync</key>
+      <true/>
+      <key>allowCloudKeychainSync</key>
+      <true/>
+      
+      <!-- Optionally keep or remove diagnostics -->
+      <key>allowDiagnosticSubmission</key>
+      <false/>
+
+    </dict>
+  </array>
+</dict>
+</plist>
