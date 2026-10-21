@@ -24,3 +24,9 @@ How to install:
 WARMING: IF YOUR PROFILE IS UNSIGNED OR BELOW IOS 16, YOU SHOULDN’T 
 DOWNLOAD THE PROFILE OR ELSE IT MIGHT CAUSE SOME ISSUE OR NETWORK 
 ISSUE. YOU CAN ONLY TRUST THIS PROFILE IF YOU UNDERSTAND THIS RISK!!
+
+features:
+DNS profile
+beta profile ( if they work )
+Secure profile
+Community profile ( discussion)
