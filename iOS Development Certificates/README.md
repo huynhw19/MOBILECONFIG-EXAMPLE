@@ -7,4 +7,7 @@ How to install
 5. The bundle l dent fire must start with anardoni.expret
 6. Click Import profile and import the Mobileprovision.
 7. Done! It should work
-   
+
+   IMPORTANT!! IF THE CERTIFICATE IS REVOKED OR EXPIRE,
+   YOUR CERTAINLY WILL MIGHT NOT WORK AND CAN’T DOWNLOAD
+   ANY APPS!!!!  
