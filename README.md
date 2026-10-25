@@ -1,32 +1,29 @@
-# MOBILECONFIG-EXAMPLE-1
-All of the mobileconfig will be here. IOS only
+# MOBILECONFIG-EXAMPLE
+All of the mobileconfig files are here. iOS only.
 
-These one might request you to update to 16 to 26.
+These profiles may require iOS 16 to 26 support.
 
-There are also dns in this one.
+There are also DNS profiles in this repository.
 
 How to install:
-1. unzip the file
-2. Open the mobileconfig
-3. Open settings ( if asked )
-4. Scroll down through general and you see a VPN
-5. Click VPN and then Click the profile.
-6. Check if the file is signed or not.
-7. Make sure you click next
-8. Read the message ( If shown )
-9. Then click next ( if the message shown )
-10. Enter your passcode 
-11. Read the WARMING message. If you understand the risk, you should be able to install the profile.
-12. Click install and wait.
-13. Once is done, the settings have changed.
+1. Download the profile and save it to your device.
+2. Open the .mobileconfig file.
+3. Open Settings if prompted.
+4. Go to General > VPN & Device Management.
+5. Tap the profile and review the details.
+6. Check whether the profile is signed.
+7. Tap Next.
+8. Read the warning, if shown.
+9. Tap Install.
+10. Enter your passcode.
+11. Review the warning carefully and continue only if you understand the risk.
+12. Tap Install again and wait for the profile to finish installing.
+13. Once complete, the device settings will have changed.
 
-   
-WARMING: IF YOUR PROFILE IS UNSIGNED OR BELOW IOS 16, YOU SHOULDN’T 
-DOWNLOAD THE PROFILE OR ELSE IT MIGHT CAUSE SOME ISSUE OR NETWORK 
-ISSUE. YOU CAN ONLY TRUST THIS PROFILE IF YOU UNDERSTAND THIS RISK!!
+WARNING: If a profile is unsigned or designed for an older iOS version, you should not install it unless you fully understand the risk. An untrusted profile may cause network or device issues.
 
-features:
-DNS profile
-beta profile ( if they work )
-Secure profile
-Community profile ( discussion)
+Features:
+- DNS profile
+- Beta profile (if supported)
+- Secure profile
+- Community profile (discussion)
