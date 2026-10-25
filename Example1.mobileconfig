@@ -1,41 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-   <key>PayloadUUID</key>
-   <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-   <key>PayloadType</key>
-   <string>Configuration</string>
-   <key>PayloadOrganization</key>
-   <string>Example Organization</string>
-   <key>PayloadIdentifier</key>
-   <string>com.example.mobileconfig</string>
-   <key>PayloadDisplayName</key>
-   <string>Example Configuration</string>
-   <key>PayloadDescription</key>
-   <string>Configuration settings for Example Organization</string>
-   <key>PayloadVersion</key>
-   <integer>1</integer>
-   <key>PayloadEnabled</key>
-   <true/>
-   <key>PayloadContent</key>
-   <array>
-       <dict>
-           <key>PayloadType</key>
-           <string>com.apple.wifi.managed</string>
-           <key>PayloadIdentifier</key>
-           <string>com.example.wifi</string>
-           <key>PayloadDisplayName</key>
-           <string>WiFi Configuration</string>
-           <key>SSID_STR</key>
-           <string>ExampleWiFi</string>
-           <key>AutoJoin</key>
-           <true/>
-           <key>EncryptionType</key>
-           <string>WPA</string>
-           <key>Password</key>
-           <string>examplepassword</string>
-       </dict>
-   </array>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>AutoJoin</key>
+            <true/>
+            <key>CaptiveBypass</key>
+            <false/>
+            <key>EncryptionType</key>
+            <string>WPA</string>
+            <key>HIDDEN_NETWORK</key>
+            <false/>
+            <key>Password</key>
+            <string>ExamplePassword123</string>
+            <key>PayloadDescription</key>
+            <string>Configures Wi-Fi settings</string>
+            <key>PayloadDisplayName</key>
+            <string>Wi-Fi</string>
+            <key>PayloadIdentifier</key>
+            <string>com.example.wifi</string>
+            <key>PayloadType</key>
+            <string>com.apple.wifi.managed</string>
+            <key>PayloadUUID</key>
+            <string>5A9CB8B6-40A9-421D-B8F2-7337E692ABC7</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>ProxyType</key>
+            <string>None</string>
+            <key>SSID_STR</key>
+            <string>ExampleWiFi</string>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Example Wi-Fi profile</string>
+    <key>PayloadDisplayName</key>
+    <string>Example Wi-Fi</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.profile</string>
+    <key>PayloadOrganization</key>
+    <string>Example Organization</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
 </dict>
 </plist>
