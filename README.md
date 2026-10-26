@@ -57,6 +57,20 @@ This repository contains example `.mobileconfig` files, including:
 12. Tap Install again and wait for setup to finish.
 13. Once complete, the device settings will have changed.
 
+
+<div align="center">
+  <img src="https://img.shields.io/badge/iPhone-Profile%20Setup-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iPhone profile setup" />
+  <img src="https://img.shields.io/badge/mobileconfig-Examples-4B8BBE?style=for-the-badge&logo=apple&logoColor=white" alt="mobileconfig examples" />
+  <img src="https://img.shields.io/badge/Security-Hardening-FF6B6B?style=for-the-badge&logo=apple&logoColor=white" alt="Security hardening" />
+</div>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Settings-Device%20Management-3A3A3A?style=for-the-badge&logo=apple&logoColor=white" alt="Settings device management" />
+  <img src="https://img.shields.io/badge/Profiles-WiFi%20%7C%20Mail%20%7C%20DNS-5C7CFA?style=for-the-badge" alt="Wi-Fi Mail DNS profiles" />
+</p>
+
+
+
 ## ⚠️ Warning
 
 Profiles may be unsigned, experimental, or built for older iOS versions. Only install profiles from trusted sources and only if you understand the risk. An untrusted configuration profile may affect network access, device behavior, or privacy.
