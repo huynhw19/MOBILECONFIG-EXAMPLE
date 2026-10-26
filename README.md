@@ -1,85 +1,87 @@
 # MOBILECONFIG-EXAMPLE
 
 <div align="center">
-
   <img src="https://img.shields.io/badge/iOS-16%20to%2026-000000?style=for-the-badge&logo=apple" alt="iOS support" />
   <img src="https://img.shields.io/badge/iPadOS-16%20to%2026-000000?style=for-the-badge&logo=apple" alt="iPadOS support" />
   <img src="https://img.shields.io/badge/Profiles-Collection-4B8BBE?style=for-the-badge" alt="Profiles collection" />
   <img src="https://img.shields.io/badge/Status-Examples%20Only-FF6B6B?style=for-the-badge" alt="Examples only" />
-
 </div>
 
-A curated collection of example Apple configuration profiles for iOS and iPadOS devices.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/huynhw19/MOBILECONFIG-EXAMPLE/main/.github/assets/hero-placeholder.png" alt="Apple-style mobileconfig preview" width="960" />
+</p>
 
-> This repository contains sample `.mobileconfig` files for education, testing, and experimentation. They are not production-ready unless reviewed and adapted by a trusted source.
+A curated library of Apple configuration profile examples for iOS and iPadOS.
+
+> Sample `.mobileconfig` files for learning, testing, and experimentation. These are examples only and should be reviewed before use on a real device.
 
 ## Overview
 
-This repo includes configuration profile examples covering:
+This repository contains practical profile samples for:
 
-- Wi‑Fi and network setup
-- Mail and account provisioning
+- Wi‑Fi and network provisioning
+- Mail, CalDAV, and CardDAV setup
 - DNS and security settings
-- Beta profile examples
-- Hardening and privacy-focused samples
-- Community-shared reference files
+- Beta and version-specific profiles
+- Hardening and privacy-focused examples
+- Community-shared profile ideas
 
 ## Why this repo?
 
-Whether you're learning how Apple configuration profiles work or building a custom deployment, these examples provide a practical starting point.
+Built as a clean reference set for anyone exploring device configuration profiles.
 
-- Easy-to-follow profile examples
-- Organized by use case and category
-- Helpful for iPhone and iPad testing
-- Good base for customization and experimentation
+- Easy-to-follow examples
+- Organized by use case
+- Suitable for iPhone and iPad testing
+- Helpful for building custom configurations
 
-## Repository layout
+## Repository structure
 
-| Path | Purpose |
+| Area | Description |
 | --- | --- |
-| `Example1.mobileconfig` | Basic Wi‑Fi profile example |
-| `ExampleWiFi.mobileconfig` | Wireless profile sample |
-| `Mailbox1.mobileconfig` | Mail / CalDAV / CardDAV example |
-| `Community/` | Community-shared examples |
-| `IOS hardening/` | Security and hardening examples |
-| `UDID/` | UDI-related profile examples |
+| `Example1.mobileconfig` | Basic profile example |
+| `ExampleWiFi.mobileconfig` | Wi‑Fi sample |
+| `Mailbox1.mobileconfig` | Mail / account provisioning |
+| `Community/` | Community examples |
+| `IOS hardening/` | Security and hardening samples |
+| `UDID/` | UDID-related examples |
 | `Web clip/` | Web clip configuration samples |
-| `Zip/` | Compressed profile-related examples |
-| `folder_dns/` | DNS profile examples |
-| `folder_apps/` | App-related configuration samples |
+| `Zip/` | Compressed or packaged profile examples |
+| `folder_dns/` | DNS configuration examples |
+| `folder_apps/` | App-related setup examples |
 | `iOS Development Certificates/` | Certificate-related examples |
 
 ## Quick install
 
-1. Download the profile to your device.
-2. Open the `.mobileconfig` file.
-3. If prompted, open Settings.
-4. Go to General → VPN & Device Management.
-5. Tap the profile and review the details.
-6. Confirm whether the profile is signed and trusted.
-7. Tap Install.
-8. Enter your passcode if required.
-9. Review the warning and proceed only if you understand the impact.
+1. Download the `.mobileconfig` file.
+2. Open it on your device.
+3. Tap to open the profile.
+4. Go to Settings → General → VPN & Device Management.
+5. Review the details and trust the profile if appropriate.
+6. Tap Install.
+7. Enter your passcode if prompted.
 
 ## Safety notice
 
-Profiles can be unsigned, outdated, or intended only for testing. Only install profiles from trusted sources, and only when you understand what they change on your device.
+Profiles may be unsigned, outdated, or intended only for testing. Only install profiles from trusted sources, and only when you understand the impact on your device.
 
 ## Recommended use
 
-Use these files as templates, references, or learning material. Replace placeholders like hostnames, usernames, and passwords before deploying anything to a real device.
+Use these examples as templates, references, or learning material. Replace placeholders such as hostnames, usernames, and passwords before using anything in a real environment.
 
 ## Notes
 
 - Intended for education, testing, and experimentation
-- Profiles may require modification before production use
-- Some Apple devices require valid certificates or signed payloads for full functionality
-- Always verify the source before installing any profile on a real device
+- Not a production deployment bundle by default
+- Some Apple devices may require signed profiles or valid certificates
+- Always validate the source before installing on a managed or personal device
 
 ## Project status
 
-This repository is a lightweight collection of example mobile configuration profiles for learning, experimentation, and custom profile building.
+This repository is a curated collection of example Apple mobile configuration profiles for learning, testing, and customization.
 
 ---
 
-Made with ❤️ for iOS profile examples.
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20with-Apple%20inspired-1C1C1E?style=for-the-badge&logo=apple" alt="Apple inspired" />
+</p>
