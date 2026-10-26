@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show repo structure
+        run: |
+          echo "Repository root: $PWD"
+          find . -maxdepth 2 -type f | sed 's#^./##' | sort | head -200
+
+      - name: Validate YAML files
+        run: |
+          python3 - <<'PY'
+          import os
+          try:
+              import yaml
+          except ImportError:
+              print('PyYAML not installed; installing it for validation...')
+              import subprocess
+              subprocess.check_call(['python3', '-m', 'pip', 'install', 'pyyaml'])
+              import yaml
+
+          bad = []
+          for root, _, files in os.walk('.github'):
+              for name in files:
+                  if name.endswith('.yml') or name.endswith('.yaml'):
+                      path = os.path.join(root, name)
+                      try:
+                          with open(path, 'r', encoding='utf-8') as fh:
+                              yaml.safe_load(fh)
+                      except Exception as e:
+                          bad.append((path, str(e)))
+          if bad:
+              for path, err in bad:
+                  print(f'YAML error in {path}: {err}')
+              raise SystemExit(1)
+          print('All YAML files parsed successfully.')
+          PY
