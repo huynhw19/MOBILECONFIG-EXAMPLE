@@ -1,0 +1,50 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * 1'
+
+jobs:
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for obvious secrets
+        run: |
+          echo "Scanning for common secret patterns..."
+          if grep -RInE '(AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z\-_]{35}|xox[baprs]-[0-9A-Za-z-]{10,}|-----BEGIN PRIVATE KEY-----|password\s*=|pass\s*=)' . --exclude-dir=.git; then
+            echo "Potential secrets detected. Review before merging."
+            exit 1
+          fi
+          echo "No obvious secret patterns detected."
+
+      - name: Check file naming and safety
+        run: |
+          python3 - <<'PY'
+          import os
+
+          risky = []
+          for root, _, files in os.walk('.'):
+              if '.git' in root:
+                  continue
+              for f in files:
+                  if f.lower().endswith(('.mobileconfig', '.plist', '.profile')):
+                      path = os.path.join(root, f)
+                      with open(path, 'rb') as fh:
+                          data = fh.read(20000)
+                      if b'<?xml' in data.lower() or b'plist' in data.lower():
+                          continue
+                      risky.append(path)
+          if risky:
+              print("Potentially non-standard profile files:")
+              for p in risky:
+                  print(" - " + p)
+          else:
+              print("No unusual profile naming issues detected.")
+          PY
