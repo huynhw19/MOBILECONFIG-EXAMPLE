@@ -1,0 +1,16 @@
+common:
+  - "documentation"
+  - "enhancement"
+  - "help wanted"
+
+"area: mobileconfig":
+  - "mobileconfig"
+  - "configuration"
+
+"area: security":
+  - "security"
+  - "hardening"
+
+"area: ci":
+  - "ci"
+  - "automation"
