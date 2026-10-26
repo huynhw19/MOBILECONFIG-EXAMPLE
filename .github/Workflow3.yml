@@ -1,0 +1,50 @@
+name: Validate MobileConfig
+
+on:
+  push:
+    paths:
+      - '**/*.mobileconfig'
+      - '.github/workflows/validate-mobileconfig.yml'
+  pull_request:
+    paths:
+      - '**/*.mobileconfig'
+      - '.github/workflows/validate-mobileconfig.yml'
+
+jobs:
+  validate-profiles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate .mobileconfig files
+        run: |
+          python3 - <<'PY'
+          import os
+          import plistlib
+
+          files = []
+          for root, _, names in os.walk('.'):
+              for name in names:
+                  if name.lower().endswith('.mobileconfig'):
+                      files.append(os.path.join(root, name))
+
+          if not files:
+              print("No .mobileconfig files found.")
+              raise SystemExit(0)
+
+          bad = []
+          for path in sorted(files):
+              try:
+                  with open(path, 'rb') as fh:
+                      plistlib.load(fh)
+                  print(f"OK: {path}")
+              except Exception as e:
+                  bad.append((path, str(e)))
+
+          if bad:
+              for path, err in bad:
+                  print(f"INVALID: {path} -> {err}")
+              raise SystemExit(1)
+          print(f"Validated {len(files)} mobileconfig file(s).")
+          PY
