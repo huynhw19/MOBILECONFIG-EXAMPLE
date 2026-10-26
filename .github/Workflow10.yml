@@ -1,0 +1,37 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate changed files
+        run: |
+          git diff --name-only origin/${{ github.base_ref }}...HEAD > changed.txt
+          cat changed.txt
+
+      - name: Ensure no suspicious large binary uploads
+        run: |
+          python3 - <<'PY'
+          import os
+          bad = []
+          for root, _, files in os.walk('.'):
+              if '.git' in root:
+                  continue
+              for f in files:
+                  p = os.path.join(root, f)
+                  if os.path.getsize(p) > 5 * 1024 * 1024 and not p.endswith(('.md', '.yml', '.yaml', '.mobileconfig')):
+                      bad.append(p)
+          if bad:
+              print('Large non-text files detected:')
+              for p in bad:
+                  print(' - ' + p)
+              raise SystemExit(1)
+          print('No suspicious large non-text files found.')
+          PY
