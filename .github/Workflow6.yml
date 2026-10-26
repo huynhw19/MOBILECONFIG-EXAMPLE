@@ -1,0 +1,30 @@
+name: Release Notes
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate release notes
+        run: |
+          echo "# Release Notes" > release-notes.md
+          echo "" >> release-notes.md
+          echo "- Automated release generated from repository tag." >> release-notes.md
+          echo "- Review all mobileconfig examples before deployment." >> release-notes.md
+          echo "- Validate profile integrity and trust sources before use." >> release-notes.md
+          cat release-notes.md
+
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: release-notes.md
