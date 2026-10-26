@@ -1,0 +1,40 @@
+name: Nightly Audit
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  audit-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Audit repo contents
+        run: |
+          echo "Repository inventory:"
+          find . -maxdepth 2 -type f | sed 's#^./##' | sort
+
+      - name: Check for stale or suspicious files
+        run: |
+          python3 - <<'PY'
+          import os
+
+          suspicious = []
+          for root, _, files in os.walk('.'):
+              if '.git' in root:
+                  continue
+              for f in files:
+                  p = os.path.join(root, f)
+                  if f.endswith(('.exe', '.dll', '.ps1', '.bat', '.cmd')):
+                      suspicious.append(p)
+
+          if suspicious:
+              print("Executable/script files detected:")
+              for p in suspicious:
+                  print(" - " + p)
+          else:
+              print("No executable/script files detected in the repo root inventory.")
+          PY
