@@ -13,7 +13,7 @@
 
 A curated collection of Apple configuration profile examples designed for learning, validation, and controlled enterprise testing.
 
-> This repository contains sample `.mobileconfig` files for education, experimentation, and internal security review. Profiles are not production-ready without trusted validation and appropriate adaptation.
+> This repository contains sample `.mobileconfig` files for education, experimentation, and internal security review. Profiles are not production-ready without trusted validation and appropriate review.
 
 ## Overview
 
@@ -25,6 +25,17 @@ This repository includes reference examples for:
 - Beta and version-specific profile testing
 - Hardening, privacy, and access restrictions
 - Community-shared examples for review and adaptation
+
+## Screenshots
+
+<div align="center">
+  <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80" alt="iPhone settings and device configuration" width="420" />
+  <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=900&q=80" alt="Apple device and managed profile workflow" width="420" />
+</div>
+
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1200&q=80" alt="iOS device management and mobile profile configuration" width="900" />
+</p>
 
 ## Enterprise use case
 
