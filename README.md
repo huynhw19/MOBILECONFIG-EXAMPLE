@@ -8,98 +8,64 @@
 </div>
 
 <p align="center">
-  <b>Secure device configuration reference samples for iOS and iPadOS.</b>
+  <strong>Sample Apple configuration profiles for learning and controlled testing</strong>
 </p>
 
-A curated collection of Apple configuration profile examples designed for learning, validation, and controlled enterprise testing.
-
-> This repository contains sample `.mobileconfig` files for education, experimentation, and internal security review. Profiles are not production-ready without trusted validation and appropriate review.
+This repository contains example `.mobileconfig` files for iOS and iPadOS. It is intended for education, validation, and internal security review. These profiles are not production-ready without trusted review and environment-specific testing.
 
 ## Overview
 
-This repository includes reference examples for:
+This collection includes examples for:
 
-- Wi‑Fi and network access policy setup
+- Wi‑Fi and network setup
 - Mail, CalDAV, and CardDAV provisioning
 - DNS and connectivity controls
 - Beta and version-specific profile testing
-- Hardening, privacy, and access restrictions
-- Community-shared examples for review and adaptation
+- Device hardening and privacy restrictions
+- Community-shared examples
 
-## Screenshots
-
-<div align="center">
-  <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80" alt="iPhone settings and device configuration" width="420" />
-  <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=900&q=80" alt="Apple device and managed profile workflow" width="420" />
-</div>
-
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1200&q=80" alt="iOS device management and mobile profile configuration" width="900" />
-</p>
-
-## Enterprise use case
-
-These files are intended as a starting point for controlled testing and internal device configuration design.
-
-- Understand how profiles are structured
-- Review payload behavior before deployment
-- Validate configuration assumptions in a lab environment
-- Customize profiles for managed-device workflows
-
-## Security posture
-
-Use these samples with a trusted security review workflow.
-
-- Validate the source before installation
-- Review every payload before deployment
-- Treat unsigned or outdated profiles as high-risk
-- Restrict profile use to lab, pilot, or approved testing environments
-- Confirm the profile aligns with your compliance and security policy
-
-## Repository layout
+## Repository structure
 
 | Path | Purpose |
 | --- | --- |
-| `Example1.mobileconfig` | Basic profile example |
+| `Example1.mobileconfig` | Basic example profile |
 | `ExampleWiFi.mobileconfig` | Wi‑Fi provisioning sample |
-| `Mailbox1.mobileconfig` | Mail account and service configuration |
-| `Community/` | Community-reviewed or shared profile examples |
+| `Mailbox1.mobileconfig` | Mail account configuration |
+| `Community/` | Community-reviewed examples |
 | `IOS hardening/` | Security hardening and privacy samples |
 | `UDID/` | UDID-related examples |
-| `Web clip/` | Managed web clip configurations |
-| `Zip/` | Bundled or archived profile examples |
-| `folder_dns/` | DNS configuration samples |
+| `Web clip/` | Managed web clip profiles |
+| `Zip/` | Archive and bundled examples |
+| `folder_dns/` | DNS profile samples |
 | `folder_apps/` | App policy and setup examples |
-| `iOS Development Certificates/` | Certificate-related samples |
+| `iOS Development Certificates/` | Certificate-related examples |
 
-## Quick install
+## Quick start
 
-1. Download the `.mobileconfig` profile to the device.
-2. Open the file and review the details.
-3. Navigate to Settings → General → VPN & Device Management.
-4. Confirm the profile is trusted and expected.
-5. Tap Install.
-6. Enter the device passcode if required.
-7. Only proceed if the profile is approved for your environment.
+1. Download the `.mobileconfig` file you want to test.
+2. Review the profile contents before installation.
+3. Open the file on an iPhone or iPad.
+4. Go to Settings → General → VPN & Device Management.
+5. Confirm the profile is expected and trusted.
+6. Install only in a lab or approved testing environment.
 
-## Risk notice
+## Security note
 
-Profiles may be unsigned, outdated, or intentionally limited to testing. Installing an untrusted or misconfigured profile can change connectivity, applications, privacy, and device access.
+Use these examples carefully.
+
+- Validate the source before installation.
+- Review every payload before deployment.
+- Treat unsigned or outdated profiles as high-risk.
+- Restrict use to lab, pilot, or approved testing environments.
+- Replace placeholder usernames, hosts, and credentials before any real-world use.
 
 ## Recommended use
 
-Use these samples as templates, references, or security review artifacts. Replace placeholders such as hostnames, usernames, and passwords before any real-world deployment.
-
-## Notes
-
-- Intended for education, testing, and controlled experimentation
-- Not a turnkey production deployment package
-- Some Apple devices require valid certificates or signed payloads for full functionality
-- Always confirm operational and compliance requirements before rollout
+These profiles are best used as references, templates, or security review artifacts. They are useful for learning how Apple configuration profiles are structured and how managed settings behave in controlled scenarios.
 
 ## Project status
 
-This repository is a lightweight library of Apple mobile configuration examples for security-minded testing, configuration review, and managed-device design.
+This repository is a curated library of Apple mobile configuration examples for security-minded testing, configuration review, and managed-device design.
 
 ---
 
